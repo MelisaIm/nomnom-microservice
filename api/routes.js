@@ -6,5 +6,5 @@ const controller = require('./controller');
 const foodApi = require('../foodService/foodApi');
 
 router.get('/help', controller.about);
-router.get('/food', foodApi.getIngredientData);
+router.get('/food/:ingredient', foodApi.getIngredientData);
 module.exports = router;
