@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express();
+require('dotenv').config();
 var port = process.env.PORT || 3000;
 var routes = require('./api/routes');
 
@@ -11,5 +12,5 @@ app.use('/*', (request, response, next) => {
 	response.status(404).json('NOT_FOUND');
 });
 app.listen(port,function(){
-console.log('Server started on port: ' + port);
+  console.log('Server started on port: ' + port);
 });
